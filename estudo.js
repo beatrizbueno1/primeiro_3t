@@ -1,36 +1,25 @@
 
-let tabuada = 2;
-let nome= "ana clara"
-
- function escrever(){
-    document.write(tabuada +" x 1 ="+(tabuada*1)+"<br>");
-    document.write(tabuada +" x 1 ="+(tabuada*1)+"<br>");
-    document.write(tabuada +" x 1 ="+(tabuada*1)+"<br>");
-    document.write(tabuada +" x 1 ="+(tabuada*1)+"<br>");
-    document.write(tabuada +" x 1 ="+(tabuada*1)+"<br>");
-    document.write(tabuada +" x 1 ="+(tabuada*1)+"<br>");
-    document.write(tabuada +" x 1 ="+(tabuada*1)+"<br>");
-    document.write(tabuada +" x 1 ="+(tabuada*1)+"<br>");
-    document.write(tabuada +" x 1 ="+(tabuada*1)+"<br>");
-    document.write(tabuada +" x 1 ="+(tabuada*1)+"<br>");
-    document.write("feito por" + nome)
 
 
 
-    function minhaTabuada(){
-        for(let i = 1; j <= 9; i++){
-        document.write(" tabuada do " +i + " <br> ");
-        for(let j = 1; j <=10; j++){
-            document.write(i + " x " + " = "(j*j)+ " <br> ");
-        }
-        document.write("<br>")
-        }
 
 
-        function quadrado(){
-            for(let i = 16; i <= 20; i++){
-                document.write("0 quadrado de " + i + " é " + (i*i) "<br>")
-            }
-        }
-    }
- }
+
+
+
+
+
+valor:<input id="valor" type="text"><br>
+ juros(mesnasais): <input id="juros" type="text"><br>
+ Nr. Meses: <input id="Meses" type="text"><br>
+ <button onclick="total()">Enviar</button>
+ 
+ <br><br><br><br>
+ valor 1: <input id="v1" type="text"><br>
+ <button inclick="operaçao( "+" )" >SOMA</button>
+ <!--criar as tres operaçoes bassica-->
+
+ <br>
+ valor 2: <input id="v2" type="text"><br>
+ <button onclick="calcule()">calcule</button><br><br>
+ <span id="resultado">0,00</span>
