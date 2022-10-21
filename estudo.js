@@ -1,82 +1,32 @@
-let tabuada = 1;
-let nome = "Ana Clara";
+!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ana clara</title>
+  <script src="estudo.js"></script>
+  
+</head>
+<body>
 
-function escreva(){
-    document.write("tabuada do " + tabuada + "<br>")
-    document.write(tabuada + " x 1 = "+(tabuada*1)+"<br>");
-    document.write(tabuada + " x 2 = "+(tabuada*2)+"<br>");
-    document.write(tabuada + " x 3 = "+(tabuada*3)+"<br>");
-    document.write(tabuada + " x 4 = "+(tabuada*4)+"<br>");
-    document.write(tabuada + " x 5 = "+(tabuada*5)+"<br>");
-    document.write(tabuada + " x 6 = "+(tabuada*6)+"<br>");
-    document.write(tabuada + " x 7 = "+(tabuada*7)+"<br>");
-    document.write(tabuada + " x 8 = "+(tabuada*8)+"<br>");
-    document.write(tabuada + " x 9 = "+(tabuada*9)+"<br>");
-    document.write(tabuada + " x 10 = "+(tabuada*10)+"<br><br>");
-    document.write("feito por " + nome);
-}
+  Capital: <input id="valor" type="text"><br>
+  Juros(mensais): <input id="juros" type="text"><br>
+  <button onclick="calcula()">Enviar</button>
 
-function minhaTabuada(){
-    for(let i = 1; i <= 10; i++){
-        document.write("Tabuada do " + i +"<br>");
-        for(let j = 1; j <= 10; j++){
-            document.write(i + " x " + j + " = "+(j*i)+"<br>");
-        }
-      document.write("<br>");
-    }
-}
-
-function quadrado(){
-    for(let i = 16; i <= 20; i++){
-    document.write("O quadrado de " + i + " é " + (i*i)+ "<br>");
-    }
-}
-function moeda(atual){
-    return atual.tolocaleString("pr-br".{style: "currency".currency,currency})
-
-}
-function calcula(){
-    let c = document.getElementById("valor").value;
-    let j = document.getElementById("juros").value;
-    if (!Number(c)){
-        alert("O valor do capital deve ser numerico."):
-        document.getElementById("valor").value = "":
-        document.getElementById("valor").focus():
-        return
-    }
-    if (!Number(c)){
-        alert("O valor do capital deve ser numerico."):
-        document.getElementById("valor").value = "":
-        document.getElementById("valor").focus():
-        return   
-    }
-let r = c *(1 + (j/100));
-    document.write("resultado: " + r);
-}
-
-let op = "";
-function operacao(ope){
-  op = ope;
-}
-function calcule(){
-    let v1 = document.getElementById("v1").value;
-    let v2 = document.getElementById("v2").value;
-    let r =0;
-    
-    if(op == "+"){
-        r = Number(v1) + Number(v2);
-    }
-    if(op == "-"){
-        r = Number(v1) - Number(v2);
-    }
-    if(op == "*"){
-        r = Number(v1) * Number(v2);
-    }
-    if(op == "/"){
-        r = Number(v1) / Number(v2);
-    }
+  <br><br><br><br>
+  Valor 1: <input id="v1" type="text"><br>
+  <button onclick="operacao('+')">Somar</button>
+  <button onclick="operacao('-')">Subtrair</button>
+  <button onclick="operacao('*')">Multiplicar</button>
+  <button onclick="operacao('/')">Dividir</button>
+  <br>
+  Valor 2: <input id="v2" type="text">
+  <button onclick="calcule('+')">Calcule</button><br><br>
+  <span id="resultado">0,00</span>
 
 
-    document.getElementById("resultado").innerHTML = r;
 
-}
+</body>
+</html>
+
