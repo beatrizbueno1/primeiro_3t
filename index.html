@@ -1,18 +1,31 @@
-document.write("Resultado: R$" + r);
-}
+!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ana clara</title>
+  <script src="estudo.js"></script>
+  
+</head>
+<body>
 
-let operaçao = "";
-function operaçao(op){
-    operaçao = op;
-}
-function calcule(){
-    let v1 = document.getElementById("v1").value;
-    let v2 = document.getElementById("v2").value;
-    let r = 0;
-    // isso deve ser duplicado a cada botao.
-    if(op == "+"){
-        r = Number(v1) + Number(v2);
-    }
+  Capital: <input id="valor" type="text"><br>
+  Juros(mensais): <input id="juros" type="text"><br>
+  <button onclick="calcula()">Enviar</button>
 
-    document.getElementById("resultado").innerHTML = r;
-}
+  <br><br><br><br>
+  Valor 1: <input id="v1" type="text"><br>
+  <button onclick="operacao('+')">Somar</button>
+  <button onclick="operacao('-')">Subtrair</button>
+  <button onclick="operacao('*')">Multiplicar</button>
+  <button onclick="operacao('/')">Dividir</button>
+  <br>
+  Valor 2: <input id="v2" type="text">
+  <button onclick="calcule('+')">Calcule</button><br><br>
+  <span id="resultado">0,00</span>
+
+
+
+</body>
+</html>
