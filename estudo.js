@@ -35,24 +35,39 @@ function moeda(atual){
     return atual.tolocaleString("pr-br".{style: "currency".currency,currency})
 
 }
+
 function calcula(){
     let c = document.getElementById("valor").value;
     let j = document.getElementById("juros").value;
+    let t = document.getElementById("juros").value;
+   
     if (!Number(c)){
-        alert("O valor do capital deve ser numerico."):
-        document.getElementById("valor").value = "":
-        document.getElementById("valor").focus():
+        alert("O valor do capital deve ser numerico.")
+        document.getElementById("valor").value = ""
+        document.getElementById("valor").focus()
         return
     }
-    if (!Number(c)){
-        alert("O valor do capital deve ser numerico."):
-        document.getElementById("valor").value = "":
-        document.getElementById("valor").focus():
+    if (!Number(j)){
+        alert("O valor do juros deve ser numerico.")
+        document.getElementById("valor").value = ""
+        document.getElementById("valor").focus() 
         return   
     }
-let r = c *(1 + (j/100));
-    document.write("resultado: " + r);
+    if (!Number(t)){
+        alert("a quantidade de meses deve ser numerico.")
+        document.getElementById("meses").value = "";
+        document.getElementById("meses").focus();
+        return 
+    }
+let r = c;
+    for (let m = 1; m <= t; m++){
+        r = c * (1 +(j / 100));
+        r = r;
+        document.write("Mês " + m + "valor: " + moeda(r)+"<br>")
+    }
 }
+       document.write("resultado: " + moeda(r));
+ 
 
 let op = "";
 function operacao(ope){
@@ -78,5 +93,3 @@ function calcule(){
 
 
     document.getElementById("resultado").innerHTML = r;
-
-}
